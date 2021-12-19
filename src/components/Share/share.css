@@ -1,0 +1,18 @@
+.share-button{
+    /* background-color: #fff; */
+    /* position: absolute; */
+    left: 600px;
+    position: absolute;
+    bottom : 60px;
+    background-color: #fff;
+    color: #5BC2A8;
+}
+
+.share-button .MuiButton-root{
+    color : #5BC2A8;
+    border: 1px solid #5BC2A8;
+}
+.share-button .MuiButton-root:hover{
+    border: 1px solid #5BC2A8;
+
+}
