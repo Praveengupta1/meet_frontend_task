@@ -7,7 +7,7 @@ const Profile = ({data})=>{
     return (
         <div className="Profile-main-card">
             <div className="candidate-image">
-                <img src={require("../../assets/img1.jpg")} alt="profile"/>
+                <img src={data && data.user_image_url && data.user_image_url} alt="profile"/>
             </div>
             <div className="canddate-info">
                 <div className="about">
@@ -25,6 +25,17 @@ const Profile = ({data})=>{
                     </span>
                     <span className="exper">Experience</span>
                     <span className="total">{data && data.total_months_exp ? data.total_months_exp + " months": ""}</span>
+                    {/* <div className="exe">
+                    {data && data.user_experiences.map((item,i)=>
+                        <React.Fragment>
+                            <div className='item'>
+                                <span className='area'>{item.user_post ? item.user_post : ""}</span>
+                                <span className='company-name'>{item.company_name ? item.company_name :"" }</span>
+                                <span className='time'>{item.company_starting_date ? item.company_starting_date: ""} - {item.company_ending_date ? item.company_ending_date: ""}</span>
+                            </div>
+                        </React.Fragment>
+                    )}
+                    </div> */}
                     {data && (data.user_experiences.length > 0) &&
                     <React.Fragment>
                         <div className='item'>
